@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add User Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        width: 100%;
+        max-width: 500px;
+        padding: 20px;
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        border-radius: 10px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        text-align: center;
+        color: #007BFF;
+        margin-bottom: 20px;
+    }
+    label {
+        display: block;
+        margin-bottom: 8px;
+        color: #555555;
+        font-weight: bold;
+    }
+    input[type="text"], input[type="password"], input[type="email"], select {
+        width: calc(100% - 12px);
+        padding: 10px;
+        font-size: 1em;
+        border: 1px solid #dddddd;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease;
+    }
+    input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, select:focus {
+        border-color: #007BFF;
+        outline: none;
+    }
+    .gender-field {
+        margin-bottom: 15px;
+    }
+    .gender-label {
+        display: inline-block;
+        margin-right: 15px;
+        font-weight: normal;
+        color: #555555;
+    }
+    input[type="radio"] {
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 12px;
+        color: #ffffff;
+        background-color: #007BFF;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background-color 0.3s ease;
+    }
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <form action="adduser.jsp" method="post">
+        <h1>Add User Form</h1>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <div class="gender-field">
+            <label>Sex:</label>
+            <input type="radio" id="male" name="sex" value="male" required>
+            <label for="male" class="gender-label">Male</label>
+            <input type="radio" id="female" name="sex" value="female" required>
+            <label for="female" class="gender-label">Female</label>
+        </div>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            <option value="India">India</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Afghanistan">Afghanistan</option>
+            <option value="Burma">Burma</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <input type="submit" value="Add User">
+    </form>
+</div>
+
+</body>
+</html>
